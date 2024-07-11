@@ -18,7 +18,7 @@ public class HelloServlet extends HttpServlet {
 //    	
 //    	resp.setContentType("text/html");
 //    	resp.setCharacterEncoding("utf-8");
-//    	// plain - 문자열 그대로 출력
+//    	// plain - 臾몄옄�뿴 洹몃�濡� 異쒕젰
 //    	// html
 //    	resp.getWriter().println(""
 //    			+ "<html>"
@@ -31,8 +31,8 @@ public class HelloServlet extends HttpServlet {
 //    			+ "</body>"
 //    			+ "</html>");
     	
-		// 서블릿(내부에 들어있음)에 요청 - 캡슐화
-    	@Override // 파라미터는 무조건 문자열 작성
+		
+    	@Override 
     	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     		String name = req.getParameter("name");
     	    String age = req.getParameter("age");

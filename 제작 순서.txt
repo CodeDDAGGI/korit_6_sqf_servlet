@@ -1,0 +1,21 @@
+servlet
+
+tomcat 웹서버(8080)
+요청들어오면 req , resp를 생성 찾아갈 주소가 없으면 404 , 있으면 200으로 이동 
+doGet이 있으면 req, resp를 사용
+
+http 프로토콜 메소드
+get
+post
+put
+delete
+
+단건조회 하나의 servlet은 하나의 메소드만 가짐 
+ex)상세페이지
+객체 1개 
+
+다건조회 2개이상
+ex)같은 이름의 많은 제품
+List 다건
+
+tomcat 동작
