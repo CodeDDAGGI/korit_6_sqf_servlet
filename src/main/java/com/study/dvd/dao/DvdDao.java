@@ -42,7 +42,6 @@ public class DvdDao {
 				
 				dvds.add(dvd);
 			}
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

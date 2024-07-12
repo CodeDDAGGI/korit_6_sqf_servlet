@@ -3,6 +3,13 @@
 <%@page import="com.study.dvd.entity.Producer"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%-- 
+	<% 
+		String st = request.getParameter("searchText");
+		List<Producer> producers = ProducerDao.searchProducerByProducerName(st);
+	%>
+--%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,8 +41,8 @@
 		<button onclick="handleSearchClick()">검색</button>
 	</div>
 	<% 
-		String searchText = request.getParameter("searchText");
-		List<Producer> pros = ProducerDao.searchProducerByProducerName(searchText);
+		String st = request.getParameter("searchText");
+		List<Producer> producers = ProducerDao.searchProducerByProducerName(st);
 	%>
 	<table>
 		<thead>
@@ -46,11 +53,11 @@
 		</thead>
 		<tbody>
 			<% 
-				for(Producer prd : pros) {
+				for(Producer producer : producers) {
 			%>
 				<tr>
-					<td><%= prd.getProducerId() %></td>	
-					<td><%= prd.getProducerName() %></td>	
+					<td><%= producer.getProducerId() %></td>	
+					<td><%= producer.getProducerName() %></td>	
 				</tr>
 			<%
 				}
