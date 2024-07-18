@@ -1,0 +1,5 @@
+클라이언트  -> tomcat -> 		servlet
+	     req , resp    		utf-8
+
+서블릿이 호출되기전 전처리
+된 후 후처리

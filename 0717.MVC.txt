@@ -1,0 +1,9 @@
+mvc 패턴
+
+예시)
+model App, req, session => setAttribute , getAttribute
+
+view jsp -> html
+
+Controller servlet (url , method(dopost, doget 등등)
+
