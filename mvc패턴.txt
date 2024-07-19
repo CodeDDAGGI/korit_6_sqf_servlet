@@ -1,0 +1,53 @@
+spring mvc 패턴
+어떤 view에 어떤 모델을 넣을지를
+컨트롤러가 제어해줌
+
+컨트롤러의 역할 - 서블릿
+모델 - 리퀘스트 객체
+view - jsp
+
+spring
+클라이언트 
+
+리플렉션
+
+model1 -> model2 -> mvc
+
+<% %> 스크립틀릿
+mvc가 나오게된 과정
+
+타임리프
+
+${ } el표현식
+
+model : 데이터값
+html == view
+
+              요청시                     호출
+클라이언트    ->       톰캣            ->     DispatcherServlet   ->  핸들러 맵핑         ->  AController
+	    httpServletRequest                                          메소드를 호출            @Mapping(URL)
+                             Response         호출되어야할 메소드   <-  (리퀘스트 요청객체)
+ -> Controller를 호출
+     return 자료형(문자열string, modelandview)
+    
+
+model의 value저장할수 있음( 모든 값을 저장 키 밸류 형태로 정보가 들어감 ) - map
+ 
+model and view를 리턴 시 DispatcherServlet 모델 객체로 만들어줌
+string 리턴 시 호출할때 viewname ex) 템플릿/views/파일명/html(확장자)
+
+-> viewResolver (템플릿이랑 서피스를 붙인 어떠한 열지 파일의 위치를 찾음)
+    viewname을 건네줌 
+
+-> DispatcherServlet은 view라는 객체를 생성하는데 model이 필요하고, 실제 html파일이 필요함
+    후에 html로 변환 후 렌더링
+
+-> DispatcherServlet다시 실제보여질 화면을 톰캣으로 보내주고 response를 클라이언트에 응답
+최종적으로 모델만 리턴해줌
+
+
+http - Request   - header -> 요청에 대한 정보 (메소드, url, 서버ip, 서버 port)
+                     - body  - 데이터 -> 응답에 대한 정보(값) 파라미터
+
+      - Response - header -> 쿠키정보, 응답 컨텐츠 타입
+                     - body - 데이터 -> json,html
